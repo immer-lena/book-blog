@@ -1,10 +1,14 @@
-$primary : rgb(35 163 197);
-$secondary:  rgb(79, 79, 79);
+$primary: #8c2fb2;
+$secondary: #4F4F4FFF;
+$bg-light: #e7e7e7;
+$darkmode-bg: #1f1f1f;
+$darkmode-card-bg: #000;
 
 
-$theme-colors:(
-  "primary": $primary,
-  "secondary": $secondary
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "light": $bg-light
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";

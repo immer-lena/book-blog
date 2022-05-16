@@ -10,22 +10,32 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+<div class="darkmode-switch">
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="label bg-secondary-color">
+        <i class="bi-moon"></i>
+        <i class='bi-sun'></i>
+        <div class='ball'></div>
+    </label>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid container">
-        <a class="navbar-brand" href="#"><img src="public/assets/images/Logo-light.png" alt="" width="100" class="d-inline-block align-text-top me-5"></a>
+        <a class="navbar-brand" href="#"><img src="public/assets/images/Logo.png" alt="" width="120" class="d-inline-block align-text-top me-5"></a>
         <div class="collapse d-none-sm" id="navbarNav">
             <ul class="navbar-nav d-flex gap-5">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#top3">The Top 3</a>
+                    <a class="nav-link active " aria-current="page" href="#top3">The Top 3</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#books">All Books</a>
+                    <a class="nav-link " href="#books">All Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#about">About the author</a>
+                    <a class="nav-link " href="#about">About the author</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#newsletter">Newsletter</a>
+                    <a class="nav-link " href="#newsletter">Newsletter</a>
                 </li>
             </ul>
         </div>
@@ -34,7 +44,6 @@
 
 <div class="px-4 py-5 text-center hero d-flex align-items-center">
     <div class="hero-text bg-secondary p-5 text-white w-75 mx-auto">
-        <img src="public/assets/images/Logo-light.png" alt="" width="100" class="d-inline-block align-text-top d-none-sm">
         <h1 class="display-5 fw-bold">The best books 2021</h1>
         <div class="col mx-auto ">
             <p class="lead mb-4">Today I release with pride the best books I read in 2021. They are amazing, so I would everyone recommend to read them!

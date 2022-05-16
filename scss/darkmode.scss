@@ -1,0 +1,79 @@
+@import "variables";
+/* Darkmode */
+.darkmode-switch {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 5;
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+
+    &:checked {
+      + .label .ball {
+        transform: translateX(20px);
+      }
+    }
+  }
+  .label {
+    top: 45px;
+    left: -40px;
+    width: 35px;
+    height: 16px;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+
+    .ball {
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      position: absolute;
+      border-radius: 50%;
+      left: 0;
+      transition: transform 0.2s linear;
+    }
+
+    .bi-moon {
+      color: white;
+      font-size: 10px;
+    }
+
+    .bi-sun {
+      color: white;
+      font-size: 10px;
+    }
+  }
+}
+
+body.darkmode {
+  background-color: $darkmode-bg;
+  color: white;
+
+  .navbar{
+    background-color: $darkmode-bg !important;
+
+    .nav-link{
+      color:white !important;
+    }
+  }
+
+  .card-layout {
+    background-color: $darkmode-card-bg;
+    color: white;
+  }
+
+  .preface {
+    background-color: darken($primary, 30);
+  }
+
+  .bg-banner {
+    color: white;
+  }
+}
