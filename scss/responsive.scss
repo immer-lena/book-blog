@@ -1,0 +1,33 @@
+@media screen and (max-width: 764px){
+  .navbar{
+    flex-direction: column;
+    justify-content: center;
+
+    .navbar-nav{
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 0 !important;
+      justify-content: center;
+    }
+  }
+
+  .hero{
+    flex-direction: column;
+    align-items: flex-end !important;
+    justify-content: flex-end;
+    .hero-text{
+      width: 100% !important;
+      height: 50% !important;
+    }
+  }
+
+  .top-item{
+    img{
+      width: 70%;
+    }
+  }
+
+  .about-section{
+    padding: 2em;
+  }
+}

@@ -12,17 +12,29 @@ module.exports = function(grunt) {
                 }
             }
         },
-        import: {
-            dist: {
-                files: {
-                    'node_modules/bootstrap-icons/font/bootstrap-icons.scss': 'public/font/bootstrap-icons.scss',
-                }
-            }
-        },
         uglify: {
             my_target: {
                 files: {
                     'public/script.min.js': ['js/script.js']
+                }
+            }
+        },
+        htmlhint: {
+            html1: {
+                options: {
+                    'tag-pair': true
+                },
+                src: ['index.html']
+            }
+        },
+        htmlmin: {                                     // Task
+            dist: {                                      // Target
+                options: {                                 // Target options
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {                                   // Dictionary of files
+                    'public/index.html': 'index.html'
                 }
             }
         },
@@ -39,7 +51,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-import');
+    grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-    grunt.registerTask('default', ['sass', 'import', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'htmlhint', 'htmlmin']);
 };

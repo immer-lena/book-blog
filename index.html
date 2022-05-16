@@ -10,23 +10,14 @@
 </head>
 <body>
 
-<div class="darkmode-switch">
-    <input type="checkbox" class="checkbox" id="checkbox">
-    <label for="checkbox" class="label bg-secondary-color">
-        <i class="bi-moon"></i>
-        <i class='bi-sun'></i>
-        <div class='ball'></div>
-    </label>
-</div>
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid container">
-        <a class="navbar-brand" href="#"><img src="public/assets/images/Logo.png" alt="" width="120" class="d-inline-block align-text-top me-5"></a>
+        <a class="navbar-brand" aria-current="true" href="#"><img src="public/assets/images/Logo.png" alt="" width="120" class="d-inline-block align-text-top me-5"></a>
         <div class="collapse d-none-sm" id="navbarNav">
             <ul class="navbar-nav d-flex gap-5">
                 <li class="nav-item">
-                    <a class="nav-link active " aria-current="page" href="#top3">The Top 3</a>
+                    <a class="nav-link" href="#top3">The Top 3</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#books">All Books</a>
@@ -42,19 +33,74 @@
     </div>
 </nav>
 
-<div class="px-4 py-5 text-center hero d-flex align-items-center">
-    <div class="hero-text bg-secondary p-5 text-white w-75 mx-auto">
-        <h1 class="display-5 fw-bold">The best books 2021</h1>
-        <div class="col mx-auto ">
-            <p class="lead mb-4">Today I release with pride the best books I read in 2021. They are amazing, so I would everyone recommend to read them!
-                The genres are very different, so I think there is something for everyone!</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a class="btn btn-primary btn-lg px-4 gap-3 d-none-sm" href="#books">Let me see the books!</a>
+<div class="darkmode-switch">
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="label bg-secondary-color">
+        <i class="bi-moon"></i>
+        <i class="bi-sun"></i>
+        <div class="ball"></div>
+    </label>
+</div>
+
+<div class="p-0 text-center hero d-flex align-items-center">
+    <div class="hero-text bg-light p-5 w-50 h-100 d-flex flex-column align-items-center justify-content-center">
+        <div class="d-flex justify-content-center flex-column">
+            <h1 class="display-5 fw-bold m-0">The best books 2021</h1>
+            <div class="col mx-auto">
+                <p class="lead mb-4">Today I release with pride the best books I read in 2021. They are amazing, so I would everyone recommend to read them!
+                    The genres are very different, so I think there is something for everyone!</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a class="btn btn-primary btn-lg px-4 gap-3 d-none-sm" href="#books">Let me see the books!</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<h2 class="text-center">My Top 3 Books of 2021</h2>
+<div class="container d-flex flex-column gap-4 mb-5 mt-5" id="top3">
+    <div class="book row top-item gap-5 w-75 m-auto">
+        <img class="book-top col-sm col-md-6"
+             src="https://raw.githubusercontent.com/atomic-variable/images-repo/e37f432405904a280858e5437ce1960753bc78a3/book-top.svg"
+             alt="book-top"/>
+        <div class="infoText col-sm mb-4">
+            <h3>1. The Diary of a Young Girl</h3>
+            <p> also known as The Diary of Anne Frank, is a book of the writings from the Dutch-language
+                diary kept by Anne Frank while she was in hiding for two years with her family during the
+                Nazi occupation of the Netherlands
+            </p>
+            <p>
+                Anne calls her diary "Kitty", so almost all of the letters are written to Kitty.</p>
+        </div>
+    </div>
+    <div class="book row top-item top-item--reversed gap-5 w-75 m-auto">
+        <img class="book-top col-sm col-md-6"
+             src="public/assets/book-cover/book-top2.svg" width="200"
+             alt="book-top"/>
+        <div class="infoText col-sm mb-4">
+            <h3>2. To Kill a Mockingbird</h3>
+            <p> The story, told by the six-year-old Jean Louise Finch,
+                takes place during three years (1933–35) of the Great Depression in the fictional town of Maycomb.
+                Nicknamed Scout, she lives with her older brother Jeremy, nicknamed Jem, and their widowed father Atticus, a middle-aged lawyer.
+                They also have a Black cook, Calpurnia, who had been with the family for many years and helped Atticus raise the two children.
+            </p>
+        </div>
+    </div>
+    <div class="book row top-item gap-5 w-75 m-auto">
+        <img class="book-top col-sm col-md-6"
+             src="public/assets/book-cover/book-top4.svg" width="200"
+             alt="book-top"/>
+        <div class="infoText col-sm mb-4">
+            <h3>3. The Alchemist</h3>
+            <p> The Alchemist (Portuguese: O Alquimista) is a novel by Brazilian author Paulo Coelho which was first published in 1988. Originally written in Portuguese,
+                it became a widely translated international bestseller. An allegorical novel,
+                The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.
+            </p>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-center">All my favorites of 2021</h2>
 <div class="container books mb-5 mt-3" id="books">
     <div class="card-container d-flex flex-row gap-3 align-items-center justify-content-center flex-wrap">
         <div class="card-layout">
@@ -430,12 +476,70 @@
 
 </div>
 
-<div id="about">
-    s
+<div class="section about-section gray-bg mb-5 mt-5 container" id="about">
+        <div class="row align-items-center justify-content-around flex-row-reverse">
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <h2 class="m-0">About the author</h2>
+                    <h3 class="text-primary">Maggie Simpson</h3>
+                    <p>I love books and writing! Because of that I want to share my book experiences with you and
+                        everything about books. Books have something special. That's why I am also writing myself. Its beautiful.
+                        I would everyone recommend to read books. I am serious! Just do it!</p>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="about-img img-fluid rounded">
+                    <img src="public/assets/images/profile.jpg" width="50%" class="rounded">
+                </div>
+            </div>
+        </div>
 </div>
 
-<div id="newsletter">
 
+<footer class="bg-light text-center" id="newsletter">
+    <div class="container p-4 d-flex justify-content-between align-items-center">
+        <section class="">
+            <a class="btn btn-floating m-1" href="#" role="button"
+            ><i class="bi-facebook"></i
+            ></a>
+            <!-- Twitter -->
+            <a class="btn btn-floating m-1" href="#" role="button"
+            ><i class="bi-twitter"></i
+            ></a>
+            <!-- Google -->
+            <a class="btn btn-floating m-1" href="#" role="button"
+            ><i class="bi-google"></i
+            ></a>
+            <!-- Instagram -->
+            <a class="btn btn-floating m-1" href="#" role="button"
+            ><i class="bi-instagram"></i
+            ></a>
+        </section>
+        <section>
+            <form action="">
+                <div class="row d-flex justify-content-center flex-row">
+                    <div class="col-auto d-flex flex-row align-items-center gap-3 flex-wrap ms-2">
+                        <p class="p-0 m-0">
+                            <strong>Sign up for my newsletter</strong>
+                        </p>
+                        <div class="form-outline form-white m-0">
+                            <input type="email" id="form-mail" class="form-control rounded" placeholder="Email address"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</footer>
+
+<div class="scrollUp position-fixed fs-2 rounded-circle bg-light d-flex justify-content-center align-items-center p-4">
+    <a href="#">
+        <i class="bi-arrow-up-short text-primary"></i>
+    </a>
 </div>
 
 </body>

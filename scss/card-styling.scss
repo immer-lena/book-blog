@@ -1,20 +1,10 @@
+
 * {
   border: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --mobile-width: 325px;
-  --mobile-height: 580px;
-  --mobile-radius: 25px;
-  --mobile-bg: whitesmoke;
-  --separator-height: 400px;
-  --font-color: #807b7b;
-  --transition: transform 0.7s ease-in-out;
-  --card-bg-light: #d3d3d3;
-  --card-preface-bg-light: $primary;
-}
 
 
 .info {
@@ -22,31 +12,30 @@
   font-style: italic;
   font-size: 26px;
   margin-top: 10px;
-  color: var(--font-color);
+  color:$font-color;
 }
 
 .card-layout {
-  width: var(--mobile-width);
-  height: var(--mobile-height);
+  width: $card-width;
+  height: $card-height;
   margin: 30px 0;
-  border-radius: var(--mobile-radius);
+  border-radius: $card-radius;
   perspective: 500px;
   overflow: hidden;
-  color: var(--font-color);
-  background-color: var(--mobile-bg);
-  box-shadow: 36px 36px 30px -25px #21252982;
+  color: $font-color;
+  background-color: $card-bg;
+  box-shadow: $box-shadow;
 
   .book-cover {
     position: relative;
-    height: var(--separator-height);
-    width: calc(var(--mobile-width) * 2);
+    height: $separator-height;
+    width: calc(#{$card-width} * 2);
     left: -52.5%;
-    border-top-left-radius: var(--mobile-radius);
-    border-top-right-radius: var(--mobile-radius);
-    background-color: var(--intro-bg);
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
     transform-style: preserve-3d;
     transform-origin: 50% 40%;
-    transition: var(--transition);
+    transition: $transition;
     z-index: 4;
   }
 
@@ -74,10 +63,6 @@
     }
     .book-cover + .preface{
       transform: translateY(-302px);
-
-      .icon {
-        transform: rotateX(180deg);
-      }
     }
 
   }
@@ -85,12 +70,12 @@
   .preface {
     height: fit-content;
     padding: 50px;
-    transition: var(--transition);
-    background: $primary;
+    transition: $transition;
+    background: $card-preface-bg-light;
 
     .header {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
     }
 
     .title {
@@ -110,9 +95,11 @@
 
     .icon {
       transform-origin: top;
-      transition: var(--transition);
-      color: white;
+      transition: $transition;
 
+      i{
+        @include icons(white, 1.5rem, 0);
+      }
     }
 
     .body {

@@ -1,7 +1,6 @@
-@import "variables";
 /* Darkmode */
 .darkmode-switch {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   display: flex;
   justify-content: flex-end;
@@ -29,6 +28,7 @@
     padding: 5px;
     position: relative;
     transform: scale(1.5);
+    background-color: $primary;
 
     .ball {
       width: 16px;
@@ -40,14 +40,8 @@
       transition: transform 0.2s linear;
     }
 
-    .bi-moon {
-      color: white;
-      font-size: 10px;
-    }
-
-    .bi-sun {
-      color: white;
-      font-size: 10px;
+    .bi-moon, .bi-sun {
+      @include icons(white, 10px, 0);
     }
   }
 }
@@ -58,10 +52,19 @@ body.darkmode {
 
   .navbar{
     background-color: $darkmode-bg !important;
-
     .nav-link{
       color:white !important;
     }
+    .navbar-brand{
+      img{
+        background-color: white;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .hero-text{
+    background-color: darken($darkmode-bg, 5) !important;
   }
 
   .card-layout {
@@ -75,5 +78,16 @@ body.darkmode {
 
   .bg-banner {
     color: white;
+  }
+
+  .scrollUp{
+    background-color: $darkmode-card-bg !important;
+  }
+
+  footer{
+    background-color: $darkmode-card-bg !important;
+    i{
+      @include icons($light, 1.5rem, 5px)
+    }
   }
 }
