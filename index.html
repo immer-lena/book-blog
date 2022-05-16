@@ -5,11 +5,46 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="public/styles/main.min.css">
+    <link rel="stylesheet" href="public/main.min.css">
     <title>Book-Blog</title>
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <div class="container-fluid container">
+        <a class="navbar-brand" href="#"><img src="public/assets/images/Logo-light.png" alt="" width="100" class="d-inline-block align-text-top me-5"></a>
+        <div class="collapse d-none-sm" id="navbarNav">
+            <ul class="navbar-nav d-flex gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#top3">The Top 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#books">All Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">About the author</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#newsletter">Newsletter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="px-4 py-5 text-center hero d-flex align-items-center">
+    <div class="hero-text bg-secondary p-5 text-white w-75 mx-auto">
+        <img src="public/assets/images/Logo-light.png" alt="" width="100" class="d-inline-block align-text-top d-none-sm">
+        <h1 class="display-5 fw-bold">The best books 2021</h1>
+        <div class="col mx-auto ">
+            <p class="lead mb-4">Today I release with pride the best books I read in 2021. They are amazing, so I would everyone recommend to read them!
+                The genres are very different, so I think there is something for everyone!</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary btn-lg px-4 gap-3 d-none-sm" href="#books">Let me see the books!</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container books mb-5 mt-3" id="books">
     <div class="card-container d-flex flex-row gap-3 align-items-center justify-content-center flex-wrap">
@@ -386,7 +421,15 @@
 
 </div>
 
+<div id="about">
+    s
+</div>
+
+<div id="newsletter">
+
+</div>
+
 </body>
 
-<script src="public/js/script.min.js"></script>
+<script src="public/script.min.js"></script>
 </html>

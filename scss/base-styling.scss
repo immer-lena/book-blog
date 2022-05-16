@@ -1,0 +1,34 @@
+@import "variables.scss";
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2{
+  color: var(--primary-color);
+}
+
+h1.bg-banner, h2.bg-banner{
+  background: #23a3c547;
+  padding: 1em;
+  color: black;
+}
+
+
+.hero{
+  background: url("public/assets/images/hero-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.bg-secondary-color{
+  background: $secondary;
+}
+
+
+.bg-primary-color{
+  background: $primary;
+}

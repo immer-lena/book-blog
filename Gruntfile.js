@@ -3,26 +3,33 @@ module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
             files: ['**/*.scss'],
-            tasks: ['sass']
+            tasks: ['sass', 'uglify', 'cssmin']
         },
         sass: {
             dist: {
                 files: {
-                    'public/styles/main.css': ['scss/style.scss']
+                    'public/main.css': ['scss/style.scss']
+                }
+            }
+        },
+        import: {
+            dist: {
+                files: {
+                    'node_modules/bootstrap-icons/font/bootstrap-icons.scss': 'public/font/bootstrap-icons.scss',
                 }
             }
         },
         uglify: {
             my_target: {
                 files: {
-                    'public/js/script.min.js': ['js/*.js']
+                    'public/script.min.js': ['js/*.js']
                 }
             }
         },
         cssmin: {
             target: {
                 files: {
-                    'public/styles/main.min.css': 'public/styles/main.css'
+                    'public/main.min.css': 'public/main.css'
                 }
             }
         }
@@ -32,7 +39,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-import');
 
-    grunt.registerTask('default', ['sass', 'cssmin', 'uglify']);
-
+    grunt.registerTask('default', ['sass', 'import', 'cssmin', 'uglify']);
 };

@@ -3,6 +3,6 @@ node_modules/
 .idea/
 .vscode/
 
-public/styles/*.css
-public/styles/*.css.map
-public/js/*.js
+public/*.css
+public/*.css.map
+public/*.js
