@@ -27,24 +27,20 @@ module.exports = function(grunt) {
                 src: ['index.html']
             }
         },
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-                options: {                                 // Target options
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {                                   // Dictionary of files
-                    'public/index.html': 'index.html'
-                }
-            }
-        },
         cssmin: {
             target: {
                 files: {
                     'public/main.min.css': 'public/main.css'
                 }
             }
-        }
+        },
+        copy: {
+            main: {
+                expand: true,
+                src: 'assets/*',
+                dest: 'public/',
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -52,7 +48,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-htmlhint');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'htmlhint', 'htmlmin']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'htmlhint', 'copy']);
 };
